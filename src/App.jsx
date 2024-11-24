@@ -3,8 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import LoginPage from "./pages/auth/Login";
 import RootLayout from "./pages/RootLayout";
-import Candidate from "./components/candidate/Candidate";
-
+import CandidateInfo from "./pages/candidate/Candidate";
+import PartyInfo from "./pages/party/Party";
+import RealtimeCount from "./pages/realtime-count/RealtimeCount";
 function App() {
   const router = createBrowserRouter([
     {
@@ -19,7 +20,17 @@ function App() {
     },
     {
       path: "/candidate",
-      element: <Candidate />,
+      element: <CandidateInfo />,
+      children: [],
+    },
+    {
+      path: "/party",
+      element: <PartyInfo />,
+      children: [],
+    },
+    {
+      path: "/realtime",
+      element: <RealtimeCount />,
       children: [],
     },
   ]);

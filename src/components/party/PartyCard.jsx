@@ -1,38 +1,29 @@
-import React from "react";
-import candidateImage from "../../assets/images/candidate-1.png";
-import partai from "../../assets/images/partai-1.png";
+import PropTypes from "prop-types";
+import partaiLogo from "../../assets/images/partai-1.png"; // Replace with the party's logo path
 
-const CandidateCard = () => {
+const PartyCard = ({ party }) => {
   return (
     <div className='flex justify-center items-center'>
       <div className='flex flex-col justify-center items-center border border-[#D9D9D9] rounded-xl p-4 max-w-xs sm:max-w-sm md:max-w-md gap-3'>
-        <div className='w-36 h-48 sm:w-40 sm:h-52 md:w-48 md:h-64'>
+        {/* Party Logo */}
+        <div className='w-36 h-48 sm:w-40 sm:h-52 md:w-48 md:h-64 flex justify-center items-center'>
           <img
-            className='rounded-xl object-cover w-full h-full'
-            src={candidateImage}
-            alt='candidate image'
+            className='object-contain w-full h-full'
+            src={party.logo || partaiLogo} // Dynamically load the party logo
+            alt={`${party.name} logo`}
           />
         </div>
-        <div className='flex gap-4 items-center w-full'>
-          <div className='flex items-center gap-2'>
-            <div className='w-8 h-8 md:w-12 md:h-12'>
-              <img
-                src={partai}
-                alt='partai'
-                className='w-full h-full object-contain'
-              />
-            </div>
-            <div className='text-black font-bold text-base sm:text-2xl'>01</div>
-            <div className='text-left text-xs'>
-              <div className='font-semibold'>Ali Ramlan</div>
-              <div className='text-gray-600'>Malang</div>
-            </div>
-          </div>
+
+        {/* Party Details */}
+        <div className='text-center flex w-full justify-around'>
+          <h3 className='text-lg sm:text-xl font-bold text-black'>
+            {party.name}
+          </h3>
           <button className='ml-auto flex justify-center items-center'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              width='18'
-              height='18'
+              width='25'
+              height='25'
               viewBox='0 0 30 30'
               fill='none'
             >
@@ -43,9 +34,18 @@ const CandidateCard = () => {
             </svg>
           </button>
         </div>
+
+        {/* Button */}
       </div>
     </div>
   );
 };
+PartyCard.propTypes = {
+  party: PropTypes.shape({
+    logo: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
-export default CandidateCard;
+export default PartyCard;
