@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VoteResult from "../../components/realtime-count/VoteResults";
+import VoteBarChart from "../../components/realtime-count/VoteBarChart";
 const RealtimeCount = () => {
   // Dropdown options
   const regions = ["TULUNGAGUNG", "SURABAYA", "MALANG"];
@@ -62,7 +63,9 @@ const RealtimeCount = () => {
 
       {/* Voting Summary Section */}
       <div className='flex justify-between'>
-        <div className='w-[500px]'></div>
+        <div className=''>
+          <VoteBarChart></VoteBarChart>
+        </div>
         {/* Voting Summary Box */}
         <VoteResult></VoteResult>
       </div>
