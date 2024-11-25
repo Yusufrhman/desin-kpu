@@ -8,6 +8,7 @@ import PartyInfo from "./pages/party/Party";
 import RealtimeCount from "./pages/realtime-count/RealtimeCount";
 import VoteInput from "./pages/party/vote-input/VoteInput";
 import LandingPage from "./pages/Landing";
+import DashboardPage from "./pages/Dashboard";
 
 function App() {
   const router = createBrowserRouter([
@@ -68,7 +69,6 @@ function App() {
         },
       ],
     },
-    
   ]);
   return <RouterProvider router={router} />;
 }
