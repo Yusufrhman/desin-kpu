@@ -21,7 +21,7 @@ const RealtimeCount = () => {
   };
 
   return (
-    <div className='p-6'>
+    <div className='p-6 mx-10 my-10'>
       {/* Dropdown Filters */}
       <div className='flex justify-center items-center mb-6 gap-5'>
         {/* Region Dropdown */}
@@ -68,7 +68,7 @@ const RealtimeCount = () => {
 
       {/* Voting Summary Section */}
       <div className='flex justify-between'>
-        <div className=''>
+        <div className='w-full flex justify-center'>
           <VoteBarChart></VoteBarChart>
         </div>
         {/* Voting Summary Box */}

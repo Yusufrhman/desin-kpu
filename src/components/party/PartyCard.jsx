@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PartyCard = ({ party }) => {
   return (
     <Link to={party.name}>
-      <div className='flex justify-center items-center'>
+      <div className=''>
         <div className='flex flex-col justify-center items-center border border-[#D9D9D9] rounded-xl p-4 max-w-xs sm:max-w-sm md:max-w-md gap-3'>
           {/* Party Logo */}
           <div className='w-36 h-48 sm:w-40 sm:h-52 md:w-48 md:h-64 flex justify-center items-center'>

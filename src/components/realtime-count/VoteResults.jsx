@@ -17,7 +17,7 @@ const VoteResults = () => {
         {parties.map((party, index) => (
           <div
             key={index}
-            className='flex items-center gap-3 bg-white p-3 rounded-lg shadow-md'
+            className='flex gap-2 bg-white p-3 rounded-lg shadow-md'
           >
             <img
               src={party.logo}
@@ -25,7 +25,7 @@ const VoteResults = () => {
               className='w-14 h-14 object-contain'
             />
             <div className='flex flex-col text-left ml-2'>
-              <span className='text-2xl font-bold'>{party.name}</span>
+              <span className='text-xl font-bold'>{party.name}</span>
               <span className='text-2xl text-red-600 font-bold'>
                 {party.percentage}
               </span>

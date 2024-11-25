@@ -34,25 +34,25 @@ export default function Login() {
     }
   }
   return (
-    <FormSection title="Selamat Datang!">
-      <form className="space-y-8" onSubmit={submit}>
+    <FormSection title='Selamat Datang!'>
+      <form className='space-y-8' onSubmit={submit}>
         <FormInput
-          id="email"
-          label="Email"
-          type="email"
-          placeholder="name@company.com"
+          id='email'
+          label='Email'
+          type='email'
+          placeholder='name@company.com'
           isError={errorMessage.email !== ""}
           errorMessage={errorMessage.email}
         />
         <FormInput
-          id="password"
-          label="Password"
-          type="password"
-          placeholder="••••••••"
+          id='password'
+          label='Password'
+          type='password'
+          placeholder='••••••••'
           isError={errorMessage.password !== ""}
           errorMessage={errorMessage.password}
         />
-        <button className="w-full h-fit bg-[#FED700] text-base px-4 py-2 rounded-lg hover:bg-[#cbb42f] ">
+        <button className='w-full h-fit bg-[#FED700] text-base px-4 py-2 rounded-lg hover:bg-[#cbb42f] '>
           Masuk
         </button>
       </form>

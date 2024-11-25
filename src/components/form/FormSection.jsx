@@ -1,10 +1,10 @@
 const FormSection = ({ title, children }) => {
   return (
-    <section className="flex flex-col gap-8 items-center justify-center w-full">
-      <h2 className="w-fit font-bold text-3xl text-left text-neutral-50 rounded-full relative mx-auto">
+    <section className='flex flex-col gap-8 items-center justify-center w-full'>
+      <h2 className='w-fit font-bold text-3xl text-left text-custom-black rounded-full relative mx-auto'>
         {title}
       </h2>
-      <div className="space-y-4 md:space-y-6 w-full">{children}</div>
+      <div className='space-y-4 md:space-y-6 w-full '>{children}</div>
     </section>
   );
 };

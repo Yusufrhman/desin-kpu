@@ -18,24 +18,24 @@ const FormInput = ({
     >
       <label
         htmlFor={id}
-        className={`block mb-2 text-sm font-medium text-white text-left ${
+        className={`block mb-2 text-sm font-medium text-custom-black text-left ${
           isError && " text-red-400"
         }`}
       >
         {label}
       </label>
-      <div className="w-full h-full relative text-left ">
+      <div className='w-full h-full relative text-left '>
         {isPassword &&
           (!isHidden ? (
             <FaEyeSlash
               size={24}
-              className="absolute right-2 top-1/2 -translate-y-1/2"
+              className='absolute right-2 top-1/2 -translate-y-1/2'
               onClick={() => setIsHidden(true)}
             />
           ) : (
             <FaEye
               size={24}
-              className="absolute right-2 top-1/2 -translate-y-1/2"
+              className='absolute right-2 top-1/2 -translate-y-1/2'
               onClick={() => setIsHidden(false)}
             />
           ))}
@@ -50,7 +50,7 @@ const FormInput = ({
         />
       </div>
       {isError && (
-        <p className="text-xs text-red-400 text-left  p-1">{errorMessage}</p>
+        <p className='text-xs text-red-400 text-left  p-1'>{errorMessage}</p>
       )}
     </motion.div>
   );

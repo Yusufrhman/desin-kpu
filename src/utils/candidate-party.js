@@ -365,7 +365,7 @@ const candidates = [
         number: 43,
         name: 'Dewi Kusuma',
         city: 'Banyuwangi',
-        party: parties[7], // PKS
+        party: parties[6], // Perindo
         image: allisaputri
     },
     {

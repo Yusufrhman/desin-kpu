@@ -4,7 +4,7 @@ import SearchFilter from "../../components/SearchFilter";
 import { candidates, parties } from "../../utils/candidate-party";
 
 const CandidateInfo = () => {
-  const candidatesPerPage = 9;
+  const candidatesPerPage = window.innerWidth >= 1024 ? 12 : 9;
 
   const options = [
     ...parties.map((party) => ({ value: party.name, label: party.name })),
@@ -58,8 +58,8 @@ const CandidateInfo = () => {
   };
 
   return (
-    <div className='flex justify-center items-center'>
-      <div className='p-4 max-w-[50vw]'>
+    <div className='flex justify-center items-center my-10'>
+      <div className='p-4 w-[60vw] min-h-lvh'>
         {/* Search and Filter */}
         <SearchFilter
           onSearch={handleSearch}
@@ -68,10 +68,17 @@ const CandidateInfo = () => {
         />
 
         {/* Candidate Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
           {paginatedCandidates.map((candidate) => (
-            <CandidateCard key={candidate.id} candidate={candidate} />
+            <CandidateCard
+              key={candidate.id}
+              candidate={candidate}
+              className='h-full'
+            />
           ))}
+          {paginatedCandidates.length === 0 && (
+            <div className='text-center text-gray-500'>No candidates found</div>
+          )}
         </div>
 
         {/* Pagination Controls */}
