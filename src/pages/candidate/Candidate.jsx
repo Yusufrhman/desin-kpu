@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CandidateCard from "../../components/candidate/CandidateCard";
 import SearchFilter from "../../components/SearchFilter";
-import { candidates, parties } from "../../lib/candidate-party";
+import { candidates, parties } from "../../utils/candidate-party";
 
 const CandidateInfo = () => {
   const candidatesPerPage = 9;

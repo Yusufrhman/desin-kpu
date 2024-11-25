@@ -6,7 +6,7 @@ const CandidateCard = ({ candidate }) => {
         <div className='w-36 h-48 sm:w-40 sm:h-52 md:w-48 md:h-64'>
           <img
             className='rounded-xl object-cover w-full h-full'
-            src={candidate.candidateImage}
+            src={candidate.image}
             alt='candidate image'
           />
         </div>
@@ -14,7 +14,7 @@ const CandidateCard = ({ candidate }) => {
           <div className='flex items-center gap-2'>
             <div className='w-8 h-8 md:w-12 md:h-12'>
               <img
-                src={candidate.partai}
+                src={candidate.party}
                 alt='partai'
                 className='w-full h-full object-contain'
               />
@@ -52,8 +52,8 @@ CandidateCard.propTypes = {
     number: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
-    partai: PropTypes.string.isRequired,
-    candidateImage: PropTypes.string.isRequired,
+    party: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
   }).isRequired,
 };
 

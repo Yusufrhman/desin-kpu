@@ -1,17 +1,13 @@
 import { useState } from "react";
 import PartyCard from "../../components/party/PartyCard";
 import SearchFilter from "../../components/SearchFilter";
-import partai from "../../assets/images/partai-1.png";
+import { parties } from "../../utils/candidate-party";
 
 const PartyInfo = () => {
   const partiesPerPage = 9;
 
   // Dummy data for parties
-  const parties = Array.from({ length: 12 }, (_, index) => ({
-    id: index + 1,
-    name: `Partai ${String.fromCharCode(65 + (index % 3))}`, // Example: Partai A, Partai B, Partai C
-    logo: partai,
-  }));
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);

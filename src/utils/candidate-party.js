@@ -8,7 +8,7 @@ import perindo from '../assets/images/party/perindo.png';
 import pks from '../assets/images/party/pks.png';
 import pan from '../assets/images/party/pan.png';
 import abdurahman from '../assets/images/candidate/AbduRahman.png';
-import aliramlan from '../assets/images/candidate/AliRamlan.png'
+// import aliramlan from '../assets/images/candidate/AliRamlan.png'
 import allisaputri from '../assets/images/candidate/AllisaPutri.png';
 import ayulestari from '../assets/images/candidate/AyuLestari.png';
 import christianabimanyu from '../assets/images/candidate/ChristianAbimanyu.png';
@@ -22,63 +22,119 @@ const candidates = [
         number: 1,
         name: 'Ali Ramlan',
         city: 'Malang',
-        partai: gerindra,
-        image: aliramlan
+        party: gerindra,
+        image: ''
     },
     {
         number: 2,
         name: 'Abdu Rahman',
         city: 'Jakarta',
-        partai: nasdem,
+        party: nasdem,
         image: abdurahman
     },
     {
         number: 3,
         name: 'Allisa Putri',
         city: 'Bandung',
-        partai: pdip,
+        party: pdip,
         image: allisaputri
     },
     {
         number: 4,
         name: 'Ayu Lestari',
         city: 'Surabaya',
-        partai: pkb,
+        party: pkb,
         image: ayulestari
     },
     {
         number: 5,
         name: 'Christian Abimanyu',
         city: 'Yogyakarta',
-        partai: golkar,
+        party: golkar,
         image: christianabimanyu
     },
     {
         number: 6,
         name: 'Muhammad Aji',
         city: 'Semarang',
-        partai: perindo,
+        party: perindo,
         image: muhammadaji
     },
     {
         number: 7,
         name: 'Putri Agung',
         city: 'Denpasar',
-        partai: pks,
+        party: pks,
         image: putriagung
     },
     {
         number: 8,
         name: 'Putri Ayu',
         city: 'Medan',
-        partai: pan,
+        party: pan,
         image: putriayu
     },
     {
         number: 9,
         name: 'Putri Ramdani',
         city: 'Makassar',
-        partai: gelora,
+        party: gelora,
+        image: putriramdani
+    },
+    {
+        number: 10,
+        name: 'Rina Sari',
+        city: 'Bali',
+        party: gerindra,
+        image: abdurahman
+    },
+    {
+        number: 11,
+        name: 'Dewi Anggraeni',
+        city: 'Solo',
+        party: nasdem,
+        image: allisaputri
+    },
+    {
+        number: 12,
+        name: 'Budi Santoso',
+        city: 'Bogor',
+        party: pdip,
+        image: christianabimanyu
+    },
+    {
+        number: 13,
+        name: 'Siti Aminah',
+        city: 'Banten',
+        party: pkb,
+        image: ayulestari
+    },
+    {
+        number: 14,
+        name: 'Agus Salim',
+        city: 'Palembang',
+        party: golkar,
+        image: muhammadaji
+    },
+    {
+        number: 15,
+        name: 'Dian Pertiwi',
+        city: 'Balikpapan',
+        party: perindo,
+        image: putriagung
+    },
+    {
+        number: 16,
+        name: 'Rizky Maulana',
+        city: 'Padang',
+        party: pks,
+        image: putriayu
+    },
+    {
+        number: 17,
+        name: 'Nina Kurnia',
+        city: 'Pekanbaru',
+        party: pan,
         image: putriramdani
     }
 ];
