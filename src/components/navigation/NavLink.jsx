@@ -9,7 +9,7 @@ export default function NavLink({ children, href }) {
     currentPath === href || (currentPath === "/" && href === "/");
   return (
     <div>
-      <Link to={href} className={`p-0 m-0 text-base ${isSelected ? "font-bold" : ""}`}>
+      <Link to={href} className={`p-0 m-0 text-sm ${isSelected ? "font-bold" : ""}`}>
         {children}
       </Link>
       {isSelected ? (

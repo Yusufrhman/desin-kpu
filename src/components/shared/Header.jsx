@@ -6,7 +6,7 @@ import { MdHowToVote } from "react-icons/md";
 
 export default function Header({}) {
   return (
-    <header className="w-full bg-custom-black p-4 shadow-xl sticky top-0">
+    <header className="w-full bg-custom-black p-4 shadow-xl sticky top-0 z-[99999] text-white">
       <div className="w-10/12 mx-auto flex items-center justify-between">
         {" "}
         <Link
@@ -14,12 +14,12 @@ export default function Header({}) {
           id="logo"
           className="flex items-center justify-center gap-2"
         >
-          <img src={LOGO} alt="LOGO KPU" />
-          <p className="font-bold text-sm">
+          <img src={LOGO} alt="LOGO KPU" className="h-14" />
+          <p className="font-bold text-xs">
             Komisi Pemilihan Umum <span className="block">Jawa Timur</span>
           </p>
         </Link>
-        <ul className="text-white flex gap-8">
+        <ul className="text-white text-sm flex gap-8">
           <li>
             <NavLink href={"/"}>Beranda</NavLink>
           </li>

@@ -6,7 +6,7 @@ import { IoLogoWhatsapp, IoLogoYoutube } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <footer className=" py-16 h-fit w-full shadow-lg bg-custom-black">
+    <footer className=" py-16 h-fit w-full shadow-lg bg-custom-black text-white">
       <section className="w-10/12 mx-auto grid grid-cols-6 justify-between gap-12">
         <section className="w-full col-span-2 flex flex-col gap-2">
           <div id="logo" className="flex items-center gap-4">
