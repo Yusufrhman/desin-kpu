@@ -30,10 +30,14 @@ const RealtimeCount = () => {
             id='region'
             value={selectedRegion}
             onChange={handleRegionChange}
-            className='rounded-full px-6 py-2'
+            className='border-transparent rounded-full px-6 py-2'
           >
             {regions.map((region) => (
-              <option key={region} value={region}>
+              <option
+                key={region}
+                value={region}
+                className='border-transparent'
+              >
                 {region}
               </option>
             ))}
