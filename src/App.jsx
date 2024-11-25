@@ -21,6 +21,11 @@ function App() {
           element: <LandingPage />,
         },
         {
+          path: "login",
+          element: <LoginPage />,
+          children: [],
+        },
+        {
           path: "tentang",
           element: <LandingPage />,
         },
@@ -38,11 +43,6 @@ function App() {
           element: <LandingPage />,
         },
       ],
-    },
-    {
-      path: "/login",
-      element: <LoginPage />,
-      children: [],
     },
     {
       path: "/candidate",
