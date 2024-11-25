@@ -1,34 +1,12 @@
 import { useState } from "react";
 import CandidateCard from "../../components/candidate/CandidateCard";
 import SearchFilter from "../../components/SearchFilter";
+import { candidates, parties } from "../../lib/candidate-party";
 
 const CandidateInfo = () => {
   const candidatesPerPage = 9;
 
-  // Dummy data for candidates
-  const candidates = Array.from({ length: 27 }, (_, index) => ({
-    id: index + 1,
-    name: `Candidate ${index + 1}`,
-    party:
-      index % 3 === 0 ? "Partai A" : index % 3 === 1 ? "Partai B" : "Partai C",
-    city: index % 3 === 0 ? "Malang" : index % 3 === 1 ? "Surabaya" : "Jakarta",
-    number: `${index + 1}`.padStart(2, "0"),
-    image: "https://via.placeholder.com/150",
-  }));
-  const options = [
-    {
-      label: "Partai A",
-      value: "Partai A",
-    },
-    {
-      label: "Partai B",
-      value: "Partai B",
-    },
-    {
-      label: "Partai C",
-      value: "Partai C",
-    },
-  ];
+  const options = ["", ...parties.map((party) => party.name)];
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);

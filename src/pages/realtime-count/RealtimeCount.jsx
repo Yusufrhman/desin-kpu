@@ -1,6 +1,7 @@
 import { useState } from "react";
 import VoteResult from "../../components/realtime-count/VoteResults";
 import VoteBarChart from "../../components/realtime-count/VoteBarChart";
+import mapJatim from "../../assets/images/map-jatim.png";
 const RealtimeCount = () => {
   // Dropdown options
   const regions = ["TULUNGAGUNG", "SURABAYA", "MALANG"];
@@ -76,8 +77,13 @@ const RealtimeCount = () => {
             Suara Masuk Berdasarkan Wilayah
           </h2>
         </div>
-        <div className='bg-gray-200 h-64 flex items-center justify-center rounded-lg'>
-          <span className='text-gray-500'>Map Placeholder</span>
+        <div className='bg-gray-200  flex items-center justify-center rounded-lg'>
+          {/* Map Image */}
+          <img
+            src={mapJatim}
+            alt='Map Placeholder'
+            className='w-full h-full object-contain'
+          />
         </div>
       </div>
     </div>
