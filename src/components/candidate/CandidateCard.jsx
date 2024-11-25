@@ -14,7 +14,7 @@ const CandidateCard = ({ candidate }) => {
           <div className='flex items-center gap-2'>
             <div className='w-8 h-8 md:w-12 md:h-12'>
               <img
-                src={candidate.party}
+                src={candidate.party.logo}
                 alt='partai'
                 className='w-full h-full object-contain'
               />
@@ -52,7 +52,11 @@ CandidateCard.propTypes = {
     number: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
-    party: PropTypes.string.isRequired,
+    party: PropTypes.shape({
+      logo: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }).isRequired,
     image: PropTypes.string.isRequired,
   }).isRequired,
 };

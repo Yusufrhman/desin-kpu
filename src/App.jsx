@@ -6,6 +6,7 @@ import RootLayout from "./pages/RootLayout";
 import CandidateInfo from "./pages/candidate/Candidate";
 import PartyInfo from "./pages/party/Party";
 import RealtimeCount from "./pages/realtime-count/RealtimeCount";
+import VoteInput from "./pages/party/vote-input/VoteInput";
 function App() {
   const router = createBrowserRouter([
     {
@@ -27,6 +28,16 @@ function App() {
       path: "/party",
       element: <PartyInfo />,
       children: [],
+    },
+    {
+      path: "/party",
+      children: [
+        {
+          path: ":name",
+          element: <VoteInput />,
+          children: [],
+        },
+      ],
     },
     {
       path: "/realtime",

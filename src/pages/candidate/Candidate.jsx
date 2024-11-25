@@ -6,7 +6,9 @@ import { candidates, parties } from "../../utils/candidate-party";
 const CandidateInfo = () => {
   const candidatesPerPage = 9;
 
-  const options = ["", ...parties.map((party) => party.name)];
+  const options = [
+    ...parties.map((party) => ({ value: party.name, label: party.name })),
+  ];
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,7 +19,7 @@ const CandidateInfo = () => {
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
     const matchesFilter = selectedFilter
-      ? candidate.party === selectedFilter
+      ? candidate.party.name === selectedFilter
       : true;
     return matchesSearch && matchesFilter;
   });
