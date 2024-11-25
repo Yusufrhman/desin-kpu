@@ -3,15 +3,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import LoginPage from "./pages/auth/Login";
 import RootLayout from "./pages/RootLayout";
-<<<<<<< HEAD
 import CandidateInfo from "./pages/candidate/Candidate";
 import PartyInfo from "./pages/party/Party";
 import RealtimeCount from "./pages/realtime-count/RealtimeCount";
 import VoteInput from "./pages/party/vote-input/VoteInput";
-=======
 import LandingPage from "./pages/Landing";
 
->>>>>>> d3da36f67028b56d29ea3bc39ca75ce16fcc4b46
+
 function App() {
   const router = createBrowserRouter([
     {
