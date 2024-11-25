@@ -6,7 +6,7 @@ import { MdHowToVote } from "react-icons/md";
 
 export default function Header({}) {
   return (
-    <header className="w-full bg-custom-black p-4 shadow-xl fixed">
+    <header className="w-full bg-custom-black p-4 shadow-xl sticky top-0">
       <div className="w-10/12 mx-auto flex items-center justify-between">
         {" "}
         <Link
