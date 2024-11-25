@@ -8,6 +8,7 @@ import PartyInfo from "./pages/party/Party";
 import RealtimeCount from "./pages/realtime-count/RealtimeCount";
 import VoteInput from "./pages/party/vote-input/VoteInput";
 import LandingPage from "./pages/Landing";
+import DashboardPage from "./pages/Dashboard";
 
 
 function App() {
@@ -42,32 +43,37 @@ function App() {
           path: "pilkada-2024",
           element: <LandingPage />,
         },
-      ],
-    },
-    {
-      path: "/candidate",
-      element: <CandidateInfo />,
-      children: [],
-    },
-    {
-      path: "/party",
-      element: <PartyInfo />,
-      children: [],
-    },
-    {
-      path: "/party",
-      children: [
         {
-          path: ":name",
-          element: <VoteInput />,
+          path: "candidate",
+          element: <CandidateInfo />,
+          children: [],
+        },
+        {
+          path: "party",
+          element: <PartyInfo />,
+          children: [],
+        },
+        {
+          path: "party",
+          children: [
+            {
+              path: ":name",
+              element: <VoteInput />,
+              children: [],
+            },
+          ],
+        },
+        {
+          path: "realtime",
+          element: <RealtimeCount />,
+          children: [],
+        },
+        {
+          path: "dashboard",
+          element: <DashboardPage />,
           children: [],
         },
       ],
-    },
-    {
-      path: "/realtime",
-      element: <RealtimeCount />,
-      children: [],
     },
   ]);
   return <RouterProvider router={router} />;
