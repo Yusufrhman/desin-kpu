@@ -4,7 +4,7 @@ import MainButton from "../buttons/MainButton";
 import NavLink from "../navigation/NavLink";
 import { MdHowToVote } from "react-icons/md";
 
-export default function Header({}) {
+export default function Header() {
   return (
     <header className="w-full bg-custom-black p-4 shadow-xl sticky top-0 z-[99999] text-white">
       <div className="w-10/12 mx-auto flex items-center justify-between">
@@ -31,6 +31,8 @@ export default function Header({}) {
           </li>
           <li>
             <NavLink href={"/unduhan"}>Unduhan</NavLink>
+          </li><li>
+            <NavLink href={"/candidate"}>Kandidat</NavLink>
           </li>
           <li>
             <NavLink href={"/pilkada-2024"}>

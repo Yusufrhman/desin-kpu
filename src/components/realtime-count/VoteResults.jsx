@@ -4,15 +4,15 @@ import pks from "../../assets/images/party/pks.png";
 import pan from "../../assets/images/party/pan.png";
 const VoteResults = () => {
   const parties = [
-    { name: "GERINDRA", logo: gerindra, percentage: "15%" },
-    { name: "PDIP", logo: pks, percentage: "35%" },
-    { name: "PKS", logo: pdip, percentage: "10%" },
-    { name: "PAN", logo: pan, percentage: "40%" },
+    { name: "GERINDRA", logo: gerindra, percentage: "25%" },
+    { name: "PDIP", logo: pdip, percentage: "23%" },
+    { name: "PKS", logo: pks, percentage: "17%" },
+    { name: "PAN", logo: pan, percentage: "14%" },
   ];
 
   return (
     <div className='flex flex-col items-center bg-yellow-400 text-center text-black p-4 rounded-lg w-64'>
-      <h1 className='text-xl font-bold mb-4'>SUARA MASUK</h1>
+      <h1 className='text-xl font-bold mb-4'>Quick Count</h1>
       <div className='flex flex-col gap-4 w-full'>
         {parties.map((party, index) => (
           <div

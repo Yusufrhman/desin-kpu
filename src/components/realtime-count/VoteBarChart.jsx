@@ -12,7 +12,7 @@ const VoteBarChart = () => {
         ]}
         series={[
           {
-            data: [150, 140, 120, 155],
+            data: [160, 155, 140, 135],
           },
         ]}
         colors={["#FED700", "#B30000"]}

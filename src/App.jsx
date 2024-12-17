@@ -45,7 +45,7 @@ function App() {
         },
         {
           path: "pilkada-2024",
-          element: <LandingPage />,
+          element: <RealtimeCount />,
         },
         {
           path: "/candidate",

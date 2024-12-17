@@ -63,7 +63,7 @@ const RealtimeCount = () => {
 
       {/* Pilkada Header */}
       <div className='text-center bg-[#B30101] text-white py-2 rounded-lg mb-6'>
-        <h1 className='text-2xl font-bold'>PILKADA 2024</h1>
+        <h1 className='text-2xl font-bold'>Pemilu 2024</h1>
       </div>
 
       {/* Voting Summary Section */}
