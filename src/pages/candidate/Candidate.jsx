@@ -59,7 +59,7 @@ const CandidateInfo = () => {
 
   return (
     <div className='flex justify-center items-center my-10'>
-      <div className='p-4 w-[60vw] min-h-lvh'>
+      <div className='p-4 w-fit min-h-lvh'>
         {/* Search and Filter */}
         <SearchFilter
           onSearch={handleSearch}

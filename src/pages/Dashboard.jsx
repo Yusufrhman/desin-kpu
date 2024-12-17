@@ -3,6 +3,7 @@ import MainButton from "../components/buttons/MainButton";
 
 import { IoPerson } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function DashboardPage() {
   return (
@@ -72,9 +73,12 @@ export default function DashboardPage() {
                 Pemilihan Kepala Daerah
               </h3>
               <IoPerson size={144} color="#B30000" />
-              <MainButton className={"w-full font-normal text-sm py-3"}>
-                Input Hasil
-              </MainButton>
+              <Link to={"/candidate"} className="w-full">
+                {" "}
+                <MainButton className={"w-full font-normal text-sm py-3"}>
+                  Input Hasil
+                </MainButton>
+              </Link>
             </li>
             <li className="flex flex-col gap-8 items-center">
               {" "}
@@ -82,9 +86,11 @@ export default function DashboardPage() {
                 Pemilihan Kepala Daerah
               </h3>
               <IoIosPeople size={166} color="#B30000" />
-              <MainButton className={"w-full font-normal text-sm py-3"}>
-                Input Hasil
-              </MainButton>
+              <Link to={"/party"} className="w-full">
+                <MainButton className={"w-full font-normal text-sm py-3"}>
+                  Input Hasil
+                </MainButton>
+              </Link>
             </li>
           </ul>
         </div>

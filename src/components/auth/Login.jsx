@@ -30,7 +30,7 @@ export default function Login() {
       });
     } else {
       setErrorMessage({ email: "", password: "" });
-      navigate("/");
+      navigate("/dashboard");
     }
   }
   return (

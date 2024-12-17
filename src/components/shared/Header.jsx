@@ -42,7 +42,9 @@ export default function Header({}) {
           </li>
         </ul>
         <div className="button">
-          <MainButton>Log in</MainButton>
+          <Link to={"/login"}>
+            <MainButton>Log in</MainButton>
+          </Link>
         </div>
       </div>
     </header>

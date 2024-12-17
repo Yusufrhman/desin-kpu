@@ -26,6 +26,11 @@ function App() {
           children: [],
         },
         {
+          path: "dashboard",
+          element: <DashboardPage />,
+          children: [],
+        },
+        {
           path: "tentang",
           element: <LandingPage />,
         },

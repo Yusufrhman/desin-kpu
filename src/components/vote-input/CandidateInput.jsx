@@ -16,9 +16,9 @@ const CandidateInput = ({ candidate, onVoteSubmit }) => {
 
   return (
     <div className='flex justify-center items-center'>
-      <div className='flex flex-col justify-center items-center border border-[#D9D9D9] rounded-xl p-4 max-w-xs sm:max-w-sm md:max-w-md gap-3'>
+      <div className='flex flex-col justify-center items-center border border-[#D9D9D9] rounded-xl p-4 w-64 h-full gap-3'>
         {/* Candidate Image */}
-        <div className='w-36 h-48 sm:w-40 sm:h-52 md:w-48 md:h-64'>
+        <div className='w-full h-full'>
           <img
             className='rounded-xl object-cover w-full h-full'
             src={candidate.image}
